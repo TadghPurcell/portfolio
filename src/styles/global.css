@@ -1,0 +1,9 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom classes */
+.image, .grid-content {
+  @apply row-span-1;
+}

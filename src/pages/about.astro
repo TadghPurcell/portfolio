@@ -1,68 +1,76 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Root.astro';
 ---
 
 <Layout title="About">
-	<main>
-	<h1>Tadgh Purcell Portfolio</h1>
-	</main>
+	<main class="about-main">
+        <div class="overview">
+          <h1>About Me</h1>
+          <div class="about-intro">
+            <h1>Hello there! I'm Tadgh Purcell.</h1>
+            <p>
+              I am a postgraduate student studying a Higher Diploma in Computer
+              Science at UCD. Before starting this course, I spent 6 months
+              learning web development, where I learned a lot about programming. I
+              have knowledge in JavaScript, Python, HTML, CSS, and React, and I am
+              currently learning Java. I also have experience using GIT and MySQL.
+              I am searching for an internship to apply my knowledge and
+              contribute to a company's needs based on what I've learned.
+            </p>
+          </div>
+        </div>
+        <div class="skills">
+          <h1>My Skills</h1>
+          <div class="skills-list">
+            <div class="skill-javascript">
+              <i class="devicon-javascript-plain colored"></i>
+              <span>javascript</span>
+            </div>
+            <div class="skill-git">
+              <i class="devicon-git-plain colored"></i>
+              <span>git</span>
+            </div>
+            <div class="skill-html">
+              <i class="devicon-html5-plain colored"></i>
+              <span>html</span>
+            </div>
+            <div class="skill-css">
+              <i class="devicon-css3-plain colored"></i>
+              <span>css</span>
+            </div>
+            <div class="skill-react">
+              <i class="devicon-react-original colored"></i>
+              <span>react</span>
+            </div>
+            <div class="skill-nodejs">
+              <i class="devicon-nodejs-plain colored"></i>
+              <span>nodejs</span>
+            </div>
+            <div class="skill-npm">
+              <i class="devicon-npm-original-wordmark colored"></i>
+              <span>npm</span>
+            </div>
+            <div class="skill-express">
+              <i class="devicon-express-original"></i>
+              <span>express</span>
+            </div>
+            <div class="skill-redux">
+              <i class="devicon-redux-original colored"></i>
+              <span>redux</span>
+            </div>
+            <div class="skill-mongodb">
+              <i class="devicon-mongodb-plain colored"></i>
+              <span>mongodb</span>
+            </div>
+            <div class="skill-webpack">
+              <i class="devicon-webpack-plain colored"></i>
+              <span>webpack</span>
+            </div>
+            <div class="skill-jest">
+              <i class="devicon-jest-plain colored"></i>
+              <span>jest</span>
+            </div>
+          </div>
+        </div>
+      </main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>

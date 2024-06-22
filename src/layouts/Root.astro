@@ -1,0 +1,52 @@
+---
+import Navigation from '../components/navigation/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '@fontsource-variable/raleway';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-white ">
+		<Navigation />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	:root {
+		/* --oyb-gradients: rgba(16,185,129,.9), rgba(32,227,178,.8), rgba(12,235,235,.8) */
+		--oyb-gradients: rgba(15,115,238,.9), rgba(0,172,255,.8), rgba(110,250,204,.8)
+		--primary-color: rgb(15,115,238)
+		--blue: rgb(10, 160, 208)
+		-my-gray: rgb(167, 158, 158)
+	}
+
+	html {
+		font-size: 16px;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+	}
+	body {
+		font-family: raleway, sans-serif;
+		margin: 0;
+		padding: 0;
+	}
+</style>

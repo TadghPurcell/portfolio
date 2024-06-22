@@ -1,0 +1,11 @@
+---
+import NavLink from "./NavLink.astro"
+---
+<nav class="fixed top-0 w-full flex justify-between items-center text-customGrey bg-white/75   px-10 md:px-5 xl:px-40 py-10 lg:py-5 xl:py-5 shadow-md">
+    <NavLink href="/" name="Home" />
+    <div class="flex gap-10">
+        <NavLink href="/about/" name="About" />
+        <NavLink href="/projects/" name="Projects" />
+        <NavLink href="/contact/" name="Contact" />
+    </div>
+</nav>
