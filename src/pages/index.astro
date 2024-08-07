@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Root.astro';
 import Intro from '../components/Intro';
+import SectionDivider from '../components/SectionDivider';
+import About from '../components/About';
+import Projects from '../components/Projects';
 ---
 <!-- ---
 import Particles from "astro-particles";
@@ -73,5 +76,8 @@ const options: ISourceOptions = {
 <Layout title="Tadgh Purcell | Personal Portfolio">
 		<main class="flex flex-col items-center px-4">
             <Intro client:load />
+            <SectionDivider client:load />
+            <About client:load />
+            <Projects client:load />
 		</main>
 </Layout>
