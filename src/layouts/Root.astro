@@ -1,13 +1,19 @@
 ---
 import Navigation from '../components/navigation/Navigation.astro';
 import Footer from '../components/Footer.astro';
-import '@fontsource-variable/raleway';
+import '@fontsource/inter';
+import Header from '../components/Header';
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
+export const metadata = {
+	title: 'Tadgh Purcell | Personal Portfolio',
+	description: 'Tadgh Purcell is a masters student studying computer science',
+};
 ---
 
 <!doctype html>
@@ -16,7 +22,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
@@ -24,10 +30,11 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-white ">
-		<Navigation />
+	<body class=`relative bg-gray-50 text-gray-950`>
+		<div class="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+        <div class="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+		<Header client:load />
 		<slot />
-		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -45,7 +52,7 @@ const { title } = Astro.props;
 		scroll-behavior: smooth;
 	}
 	body {
-		font-family: raleway, sans-serif;
+		font-family: 'Inter', sans-serif;
 		margin: 0;
 		padding: 0;
 	}

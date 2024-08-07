@@ -11,7 +11,7 @@ export default {
 				// customBlue: 'rgb(15,115,238)',
 			},
 			fontFamily: {
-				sans: ['raleway', ...defaultTheme.fontFamily.sans],
+				inter: ["Inter", "sans-serif"],
 				// serif: ['Roboto', ...defaultTheme.fontFamily.serif]
 			},
 			backgroundImage: {

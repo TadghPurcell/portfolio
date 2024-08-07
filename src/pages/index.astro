@@ -1,10 +1,76 @@
 ---
 import Layout from '../layouts/Root.astro';
+import Particles from "astro-particles";
+import type { ISourceOptions } from "tsparticles-engine";
+
+// interface IOptions {
+//     autoPlay: boolean;
+//     background: IBackground;
+//     backgroundMask: IBackgroundMask;
+//     clear: boolean;
+//     delay: RangeValue;
+//     detectRetina: boolean;
+//     duration: RangeValue;
+//     fpsLimit: number;
+//     fullScreen: boolean | RecursivePartial<IFullScreen>;
+//     interactivity: IInteractivity;
+//     key?: string;
+//     manualParticles: IManualParticle[];
+//     name?: string;
+//     particles: IParticlesOptions;
+//     pauseOnBlur: boolean;
+//     pauseOnOutsideViewport: boolean;
+//     preset?: SingleOrMultiple<string>;
+//     responsive: IResponsive[];
+//     smooth: boolean;
+//     style: RecursivePartial<CSSStyleDeclaration>;
+//     themes: ITheme[];
+//     zLayers: number;
+//     [name: string]: unknown;
+// }
+const options: ISourceOptions = {
+    background: {
+        color: "#0AA0D0"
+    },
+    fullScreen: {
+        zIndex: -1
+    },
+    particles: {
+        number: {
+            value: 100
+        },
+        move: {
+            enable: true
+        }
+    },
+	preset: "stars",
+};
 ---
 
+<script>
+    import { type Container, type Engine, tsParticles } from "tsparticles-engine";
+    import { loadFull, loadStarsPreset } from "tsparticles";
+	
+    // the function name is the parameter passed to the init attribute
+    // required
+    // add the function to window is mandatory, it will be searched there
+    window.particlesInit = async function (engine: Engine) {
+        await loadStarsPreset(engine);
+    }
+    
+    // the function name is the parameter passed to the loaded attribute
+    // optional
+    // add the function to window is mandatory, it will be searched there
+    window.particlesLoaded = function (container: Container) {
+		console.log("particlesLoaded callback");
+    }
+	</script>
+
+
 <Layout title="Home">
-	<main class="mt-40 flex gap-24 px-60 justify-center items-center">
-	<h1 class="text-center text-2xl text-gray-600">Hi, I'm Tadgh, an MSc in Computer Science student based in Dublin who loves learning and working on interesting projects.</h1>
-	<img src="images/profile_pic.png" alt="Picture of Me" class="max-w-96 shadow-md">
-	</main>
+	<Particles id="tsparticles" options={options} init="particlesInit" />
+		<main class="mt-40 flex gap-24 px-60 justify-center items-center">
+			<h1 class="text-center text-2xl text-white">Hi, I'm Tadgh, an MSc in Computer Science student based in Dublin who loves learning and working on interesting projects.</h1>
+			<img src="images/profile_pic.png" alt="Picture of Me" class="max-w-96 shadow-md">
+		</main>
 </Layout>

@@ -7,16 +7,39 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
-  },
+    "astro": "astro",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.astro,.mjs,.cjs  .",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.astro,.mjs,.cjs . --fix"
+   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/netlify": "^5.3.2",
+    "@astrojs/react": "^3.6.1",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/raleway": "^5.0.20",
+    "@fontsource/inter": "^5.0.20",
     "@fontsource/twinkle-star": "^5.0.20",
+    "@tsparticles/preset-stars": "^3.1.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "astro": "^4.10.2",
-    "tailwindcss": "^3.4.4",
+    "astro-particles": "^2.10.0",
+    "framer-motion": "^11.3.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "tailwindcss": "^3.4.7",
+    "tsparticles": "^3.5.0",
+    "tsparticles-engine": "^2.12.0",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "astro-eslint-parser": "^1.0.2",
+    "eslint": "^9.8.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
