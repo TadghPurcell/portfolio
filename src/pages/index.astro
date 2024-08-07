@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Root.astro';
+import Intro from '../components/Intro';
+---
+<!-- ---
 import Particles from "astro-particles";
 import type { ISourceOptions } from "tsparticles-engine";
 
@@ -64,13 +67,11 @@ const options: ISourceOptions = {
     window.particlesLoaded = function (container: Container) {
 		console.log("particlesLoaded callback");
     }
-	</script>
+	</script> -->
 
 
-<Layout title="Home">
-	<Particles id="tsparticles" options={options} init="particlesInit" />
-		<main class="mt-40 flex gap-24 px-60 justify-center items-center">
-			<h1 class="text-center text-2xl text-white">Hi, I'm Tadgh, an MSc in Computer Science student based in Dublin who loves learning and working on interesting projects.</h1>
-			<img src="images/profile_pic.png" alt="Picture of Me" class="max-w-96 shadow-md">
+<Layout title="Tadgh Purcell | Personal Portfolio">
+		<main class="flex flex-col items-center px-4">
+            <Intro client:load />
 		</main>
 </Layout>
