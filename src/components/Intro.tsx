@@ -4,8 +4,12 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from '../lib/hooks';
+import { useStore } from '@nanostores/react';
+import { activeSection, timeOfLastClick } from '../store';
 
 export default function Intro() {
+    const $activeSection = useStore(activeSection);
+    const $timeOfLastClick = useStore(timeOfLastClick);
     const { ref } = useSectionInView('Home', 0.5);
         
   return (
@@ -56,18 +60,23 @@ export default function Intro() {
                   delay: 0.1,
                 }}>
                 <button className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full 
-                    outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>
+                    outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+                    onClick={() => {
+                        activeSection.set('Contact');
+                        timeOfLastClick.set(Date.now());
+                    }}
+                    >
                     <a href='#contact'>Contact Me Here{" "}</a>
                     <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
                 </button>
                 <button className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
-                focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10">
+                focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack">
                     <a href="/public/CV.pdf" download>Download CV{" "}</a>
                     <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
                 </button>
                 <a
                     className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none 
-                    focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+                    focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack"
                     href="https://www.linkedin.com/in/tadghp/"
                     target="_blank"
                 >
@@ -75,7 +84,7 @@ export default function Intro() {
                 </a>
                 <a
                     className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] 
-                    outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+                    outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack"
                     href="https://github.com/TadghPurcell"
                     target="_blank"
                 >
