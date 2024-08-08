@@ -3,11 +3,12 @@ import { motion } from 'framer-motion'
 import { links } from '../lib/data'
 import clsx from 'clsx';
 import { useStore } from '@nanostores/react';
-import { activeSection } from '../activeSection';
+import { activeSection, timeOfLastClick } from '../store';
 
 
 export default function Header() {
   const $activeSection = useStore(activeSection);
+  const $timeOfLastClick = useStore(timeOfLastClick);
 
   return (
     <header className="z-[999] relative">
@@ -40,7 +41,7 @@ export default function Header() {
                 href={link.hash}
                 onClick={() => {
                   activeSection.set(link.name);
-                  // setTimeOfLastClick(Date.now());
+                  timeOfLastClick.set(Date.now());
                 }}>
                   {link.name}
 
