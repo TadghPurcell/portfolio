@@ -4,7 +4,7 @@ import { projectsData } from '../lib/data'
 
 type ProjectProps = (typeof projectsData)[number]
 
-export default function Project({title, description, tags, imageUrl}: ProjectProps) {
+export default function Project({title, description, tags, imageUrl, link}: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -20,7 +20,8 @@ export default function Project({title, description, tags, imageUrl}: ProjectPro
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="cursor-pointer group mb-3 sm:mb-8 last:mb-0"
+      onClick={() => window.open(link, '_blank')}
     >
       <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg 
       overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8">

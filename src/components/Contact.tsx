@@ -24,7 +24,6 @@ export default function Contact() {
     const [message, setMessage] = useState<string>('');
 
     const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY as string;
-    console.log(accessKey);
 
     const { submit: onSubmit } = useWeb3Forms({
       access_key: accessKey,

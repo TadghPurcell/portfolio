@@ -26,7 +26,7 @@ export default function Intro() {
                     type: "tween",
                     duration: 0.2,
                   }}
-                src="/images/profile_pic.jpg" alt="Tadgh portrait" width={192} height={192}
+                src="profile_pic.png" alt="Tadgh portrait" width={192} height={192}
                 className='h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl'/>
            
             <motion.span className='text-4xl absolute bottom-0 right-0'
