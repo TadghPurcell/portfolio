@@ -45,11 +45,12 @@ export default function Intro() {
                 className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}>
-                <span className="font-bold">Hello, I'm Tadgh.</span> I'm a{" "}
-                <span className="font-bold">Master's Student Currently Studying Computer Science</span> with{" "}
-                <span className="font-bold">8 years</span> of experience. I enjoy
-                building new <span className="italic">projects</span>. My current focus is learning{" "}
-                <span className="underline">React</span>.
+                    
+                <span className="font-bold">Hello, I'm Tadgh Purcell.</span> I'm a{" "}
+                <span className="font-bold">software developer </span>
+                who loves building cool stuff and tackling tough problems. 
+                I'm currently completing my <span className="font-bold">MSc in Computer Science at UCD </span> 
+                and on the lookout for a graduate role once I finish.
             </motion.h1>
             
             <motion.div 
@@ -71,7 +72,7 @@ export default function Intro() {
                 </button>
                 <button className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
                 focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack">
-                    <a href="/public/CV.pdf" download>Download CV{" "}</a>
+                    <a href="/public/Tadgh_Purcell_CV.pdf" download>Download CV{" "}</a>
                     <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
                 </button>
                 <a
