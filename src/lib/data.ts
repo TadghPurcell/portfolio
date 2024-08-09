@@ -67,7 +67,7 @@ export const projectsData = [
     tags: [
       "React",
       "TypeScript",
-      "Framer Motion",
+      "Framer",
       "PostgreSQL",
       "Tailwind",
       "Java",

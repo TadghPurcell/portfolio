@@ -27,7 +27,7 @@ export default function Intro() {
                     duration: 0.2,
                   }}
                 src="profile_pic.png" alt="Tadgh portrait" width={192} height={192}
-                className='h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl'/>
+                className='h-24 w-24 rounded-full border-[0.35rem] border-secondary-50 object-cover shadow-xl'/>
            
             <motion.span className='text-4xl absolute bottom-0 right-0'
             initial={{ opacity: 0, scale: 0 }}
@@ -60,8 +60,8 @@ export default function Intro() {
                 transition={{
                   delay: 0.1,
                 }}>
-                <button className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full 
-                    outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+                <button className='group bg-primary-600 text-secondary-50 px-7 py-3 flex items-center gap-2 rounded-full 
+                    outline-none focus:scale-110 hover:scale-110 hover:bg-primary-500 active:scale-105 transition'
                     onClick={() => {
                         activeSection.set('Contact');
                         timeOfLastClick.set(Date.now());
@@ -70,28 +70,31 @@ export default function Intro() {
                     <a href='#contact'>Contact Me Here{" "}</a>
                     <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
                 </button>
-                <button className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
-                focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack">
+
+                <button className="group bg-secondary-50 px-7 py-3 flex items-center gap-2 rounded-full outline-none 
+                focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderGreen">
                     <a href="/public/Tadgh_Purcell_CV.pdf" download>Download CV{" "}</a>
-                    <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+                    <HiDownload className="opacity-75 group-hover:translate-y-1 transition" />
                 </button>
-                <a
-                    className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none 
-                    focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack"
-                    href="https://www.linkedin.com/in/tadghp/"
-                    target="_blank"
-                >
-                    <BsLinkedin />
-                </a>
-                <a
-                    className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] 
-                    outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack"
-                    href="https://github.com/TadghPurcell"
-                    target="_blank"
-                >
-                    <FaGithubSquare />
-                </a>
-                   
+
+                <div className='flex gap-2 '>
+                    <a
+                        className="bg-secondary-50 p-4 text-primary-700 flex items-center gap-2 rounded-full outline-none 
+                        focus:scale-[1.15] hover:scale-[1.15] hover:text-primary-800 active:scale-105 transition cursor-pointer borderGreen"
+                        href="https://www.linkedin.com/in/tadghp/"
+                        target="_blank"
+                        >
+                        <BsLinkedin />
+                    </a>
+                    <a
+                        className="bg-secondary-50 p-4 text-primary-700 flex items-center gap-2 rounded-full text-[1.35rem] 
+                        outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-primary-800 active:scale-105 transition cursor-pointer borderGreen"
+                        href="https://github.com/TadghPurcell"
+                        target="_blank"
+                        >
+                        <FaGithubSquare />
+                    </a>
+                </div>
                     
             </motion.div>
     </section>

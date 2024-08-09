@@ -28,9 +28,7 @@ export const metadata = {
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class=`relative bg-gray-50 text-gray-950 pt-28 sm:pt-36`>
-		<div class="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-        <div class="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+	<body class=`bg-secondary-50 relative bg-gray-50 text-primary-700 pt-28 sm:pt-36`>
 		<Header client:load />
 		<slot />
 	</body>
@@ -48,7 +46,7 @@ export const metadata = {
 		font-size: 16px;
 		box-sizing: border-box;
 		scroll-behavior: smooth;
-		--line-color: #e5e7eb
+		--line-color: rgb(20 64 56 / 0.1);
 	}
 	body {
 		font-family: 'Inter', sans-serif;
@@ -56,7 +54,27 @@ export const metadata = {
 		padding: 0;
 	}
 
-	.borderBlack {
-		@apply border border-black/10;
+	.borderGreen {
+		@apply border border-primary-950/15;
 	}
+
+		/* width */
+		::-webkit-scrollbar {
+			scrollbar-width: thin;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		background: #fdfff4;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		background: #1A6251;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+		background: #174E42;
+		}
 </style>

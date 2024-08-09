@@ -12,10 +12,7 @@ export default function Contact() {
       register,
       handleSubmit,
       reset,
-      watch,
-      control,
-      setValue,
-      formState: { errors, isSubmitSuccessful, isSubmitting },
+      formState: { errors, isSubmitSuccessful },
     } = useForm({
       mode: "onTouched",
     });
@@ -31,12 +28,12 @@ export default function Contact() {
         from_name: "Portfolio",
         subject: "New Contact Message from your Portfolio Website",
       },
-      onSuccess: (msg, data) => {
+      onSuccess: (msg) => {
         setIsSuccess(true);
         setMessage(msg);
         reset();
       },
-      onError: (msg, data) => {
+      onError: (msg) => {
         setIsSuccess(false);
         setMessage(msg);
       },
@@ -63,7 +60,7 @@ export default function Contact() {
 
         <SectionHeading>Contact Me</SectionHeading>
 
-        <p className="text-gray-700 -mt-6">
+        <p className="text-primary-800 -mt-6">
         Please get in touch directly at{" "}
         <a className="underline" href="mailto:tadghp@gmail.com">
           tadghp@gmail.com
@@ -75,20 +72,18 @@ export default function Contact() {
 
         <div className='my-3'>
         <input 
-          className={`w-full h-14 px-4 borderBlack rounded-lg outline-none focus:ring-4  ${
+          className={`w-full bg-secondary-50 placeholder:text-primary-800/50 h-14 px-4 borderGreen rounded-lg outline-none focus:ring-4  ${
             errors.name
-            ? "border-red-600 focus:border-red-600 ring-red-100"
-            : "border-gray-300 focus:border-gray-600 ring-gray-100"
+              ? "border-red-600 focus:border-red-600 ring-red-100"
+              : "border-primary-300 focus:border-primary-600 ring-primary-50"
           }`}
           {...register("name", {
-            required: "Full name is required",
+            required: "Please enter your full name",
             maxLength: 80,
           })}
           type="text" 
           placeholder='Your Name'
-          autoComplete="false"
-          {...register("name", { required: true })} 
-          
+          autoComplete="false"          
           />
           {errors.name && (
             <div className="mt-1 text-red-600">
@@ -103,13 +98,13 @@ export default function Contact() {
             type="email"
             placeholder="Email Address"
             autoComplete="false"
-            className={`w-full h-14 my-3 px-4 rounded-lg borderBlack py-3 border-2 outline-none focus:ring-4  ${
+            className={`w-full h-14 bg-secondary-50 my-3 px-4 placeholder:text-primary-800/50 rounded-lg borderGreen py-3 border-2 outline-none focus:ring-4  ${
               errors.email
-                ? "border-red-600 focus:border-red-600 ring-red-100 "
-                : "border-gray-300 focus:border-gray-600 ring-gray-100"
+                ? "border-red-600 focus:border-red-600 ring-red-100"
+                : "border-primary-300 focus:border-primary-600 ring-primary-50"
             }`}
             {...register("email", {
-              required: "Enter your email",
+              required: "Please enter your email",
               pattern: {
                 value: /^\S+@\S+$/i,
                 message: "Please enter a valid email",
@@ -126,13 +121,13 @@ export default function Contact() {
         <div>
           <textarea
             placeholder="Your Message"
-            className={`h-52 my-3 rounded-lg borderBlack p-4 w-full outline-none focus:ring-4 ${
+            className={`bg-secondary-50 h-52 placeholder:text-primary-800/50 my-3 rounded-lg borderGreen p-4 w-full outline-none focus:ring-4 ${
               errors.message
                 ? "border-red-600 focus:border-red-600 ring-red-100"
-                : "border-gray-300 focus:border-gray-600 ring-gray-100"
+                : "border-primary-300 focus:border-primary-600 ring-primary-50"
             }`}
             {...register("message", {
-              required: "Enter your Message",
+              required: "Please enter a valid message",
             })}
           />
           {errors.message && (
@@ -145,16 +140,16 @@ export default function Contact() {
 
         <button 
           type='submit'
-          className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full
-            outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105
+          className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-primary-600 text-secondary-50 rounded-full
+            outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-primary-700 active:scale-105
             disabled:scale-100 disabled:bg-opacity-65'
         >
-          Submit <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1' /> {" "}
+          Submit <FaPaperPlane className='text-xs text-secondary-50 opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1' /> {" "}
         </button>
       </form>
 
       {isSubmitSuccessful && isSuccess && (
-        <div className="mt-3 text-sm text-center text-green-500">
+        <div className="mt-3 text-sm text-center text-primary-500">
           {message || "Success. Message sent successfully"}
         </div>
       )}

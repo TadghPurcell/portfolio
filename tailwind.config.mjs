@@ -6,9 +6,32 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				customGrey:'rgb(167, 158, 158)',
-				customBlue: 'rgb(10, 160, 208)',
-				// customBlue: 'rgb(15,115,238)',
+				primary: {
+					50: '#EFFAF6',
+					100: '#D9F2E6',
+					200: '#B6E4D2',
+					300: '#85D0B6',
+					400: '#52B597',
+					500: '#319B7E',
+					600: '#217A63',
+					700: '#1A6251',
+					800: '#174E42',
+					900: '#144038',
+					950: '#0A2420',
+				},
+				secondary: {
+					50: '#fdfff4',
+					100: '#f4fec7', 
+					200: '#e8fd8a',
+					300: '#e2fc4d', 
+					400: '#e5fb24',
+					500: '#f3f50b',
+					600: '#d9c806',
+					700: '#b49409',
+					800: '#92720e',
+					900: '#785d0f',
+					950: '#453303'
+				},
 			},
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
