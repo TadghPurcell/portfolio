@@ -7,74 +7,8 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer.astro';
 ---
-<!-- ---
-import Particles from "astro-particles";
-import type { ISourceOptions } from "tsparticles-engine";
-
-// interface IOptions {
-//     autoPlay: boolean;
-//     background: IBackground;
-//     backgroundMask: IBackgroundMask;
-//     clear: boolean;
-//     delay: RangeValue;
-//     detectRetina: boolean;
-//     duration: RangeValue;
-//     fpsLimit: number;
-//     fullScreen: boolean | RecursivePartial<IFullScreen>;
-//     interactivity: IInteractivity;
-//     key?: string;
-//     manualParticles: IManualParticle[];
-//     name?: string;
-//     particles: IParticlesOptions;
-//     pauseOnBlur: boolean;
-//     pauseOnOutsideViewport: boolean;
-//     preset?: SingleOrMultiple<string>;
-//     responsive: IResponsive[];
-//     smooth: boolean;
-//     style: RecursivePartial<CSSStyleDeclaration>;
-//     themes: ITheme[];
-//     zLayers: number;
-//     [name: string]: unknown;
-// }
-const options: ISourceOptions = {
-    background: {
-        color: "#0AA0D0"
-    },
-    fullScreen: {
-        zIndex: -1
-    },
-    particles: {
-        number: {
-            value: 100
-        },
-        move: {
-            enable: true
-        }
-    },
-	preset: "stars",
-};
----
-
-<script>
-    import { type Container, type Engine, tsParticles } from "tsparticles-engine";
-    import { loadFull, loadStarsPreset } from "tsparticles";
-	
-    // the function name is the parameter passed to the init attribute
-    // required
-    // add the function to window is mandatory, it will be searched there
-    window.particlesInit = async function (engine: Engine) {
-        await loadStarsPreset(engine);
-    }
-    
-    // the function name is the parameter passed to the loaded attribute
-    // optional
-    // add the function to window is mandatory, it will be searched there
-    window.particlesLoaded = function (container: Container) {
-		console.log("particlesLoaded callback");
-    }
-	</script> -->
-
 
 <Layout title="Tadgh Purcell | Personal Portfolio">
 		<main class="flex flex-col items-center px-4">
@@ -85,5 +19,6 @@ const options: ISourceOptions = {
             <Skills client:load />
             <Experience client:load />
             <Contact client:load />
+            <Footer />
 		</main>
 </Layout>
