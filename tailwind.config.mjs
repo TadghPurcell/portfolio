@@ -35,11 +35,8 @@ export default {
 			},
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
-				// serif: ['Roboto', ...defaultTheme.fontFamily.serif]
 			},
 			backgroundImage: {
-				'oyb-gradient': 'linear-gradient(45deg, rgba(68,152,255,.75) 0%, rgba(0,172,255,.75) 50%, rgba(0,215,236,.75) 100%)'
-				// 'oyb-gradient': 'linear-gradient(to bottom right, rgba(16, 185, 129, .9), rgba(32, 227, 178, .8), rgba(12, 235, 235, .8))'
 			},
 			height: {
 				"10v": "10vh",
