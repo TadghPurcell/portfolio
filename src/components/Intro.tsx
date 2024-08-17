@@ -48,7 +48,7 @@ export default function Intro() {
                     
                 <span className="font-bold">Hello, I'm Tadgh Purcell.</span> I'm a{" "}
                 <span className="font-bold">software developer </span>
-                who loves building cool stuff and tackling tough problems. 
+                who loves building new projects and web applications. 
                 I'm currently completing my <span className="font-bold">MSc in Computer Science at UCD </span> 
                 and on the lookout for a graduate role once I finish.
             </motion.h1>
@@ -77,7 +77,7 @@ export default function Intro() {
                     <HiDownload className="opacity-75 group-hover:translate-y-1 transition" />
                 </button>
 
-                <div className='flex gap-2 '>
+                <div className='flex gap-2'>
                     <a
                         className="bg-secondary-50 p-4 text-primary-700 flex items-center gap-2 rounded-full outline-none 
                         focus:scale-[1.15] hover:scale-[1.15] hover:text-primary-800 active:scale-105 transition cursor-pointer borderGreen"
