@@ -1,5 +1,4 @@
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import anseoImg from "/public/anseo.svg"
 import onYourBikeImg from "/public/on_your_bike.png";
@@ -34,28 +33,60 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Private Solder in Irish Defence forces",
+    location: "Dublin, Ireland",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: LuGraduationCap,
-    date: "2019",
+      "Provided aid to the Civil Power, engaged in ceremonial duties at local and national events, and pursued ongoing training to enhance skills and proficiency with new equipment, adapting to a dynamic environment.",
+    icon: CgWorkAlt,
+    date: "Aug 2015 - Sep 2017",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "BA (Hons) in International Business",
+    location: "Waterford Institute of Technology",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: CgWorkAlt,
-    date: "2019 - 2021",
+      "I graduated with a first-class honours degree in international business as an undergraduate.",
+    icon: LuGraduationCap,
+    date: "2017 - 2021",
   },
-  { 
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+  {
+    title: "Housekeeping Assistant, Noel Group Recruitment",
+    location: "Kilkenny, Ireland",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: FaReact,
-    date: "2021 - present",
+      "During the Covid-19 pandemic, I maintained cleanliness and infection control in a district hospital, following strict guidelines to ensure high standards of cleanliness in Covid-19 wards, helped control the spread of the virus to maintain safe ward conditions, and provided food to patients throughout the day.",
+    icon: CgWorkAlt,
+    date: "Apr 2020 - May 2021",
+  },
+  {
+    title: "ESL Teacher, Spěváček Language School",
+    location: "Prague, Czech Republic",
+    description:
+      "I evaluated student progress and generated comprehensive reports, encouraged a positive atmosphere in the classroom, and inspired and motivated pupils to reach their learning objectives.",
+    icon: CgWorkAlt,
+    date: "Jun 2021 - Dec 2021",
+  },
+  {
+    title: "International Assignment Associate, Graebel Relocation",
+    location: "Prague, Czech Republic",
+    description:
+      "I processed allowances, payments, and costs, ensured transferees' services and expenses complied with the Client’s policy, and maintained organised files to ensure reliable tracking and reporting for sustained data quality.",
+    icon: CgWorkAlt,
+    date: "Jul 2021 - Apr 2022",
+  },
+  {
+    title: "MSc Computer Science",
+    location: "University College Dublin",
+    description:
+      "Currently completing a Master's degree in Computer Science and graduating in December 2024.",
+    icon: LuGraduationCap,
+    date: "Sep 2023 - Present",
+  },
+  {
+    title: "BikeHood Research Project",
+    location: "University College Dublin",
+    description:
+      "We are developing a digital twin of a Dublin neighbourhood, capturing spatial and temporal dynamics of cycling, pedestrian, and transport infrastructure. We will also develop an interactive web application to showcase the digital twin to a variety of stakeholders.",
+    icon: CgWorkAlt,
+    date: "Aug 2024 - Present",
   },
 ] as const;
 
