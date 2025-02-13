@@ -2,7 +2,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import anseoImg from "/public/anseo.svg"
 import onYourBikeImg from "/public/on_your_bike.png";
-import javaGameImg from "/public/java_game_pic.jpg";
+import landsatImg from "/public/landsat_app.png"
 
 export const links = [
   {
@@ -78,16 +78,24 @@ export const experiencesData = [
     description:
       "Currently completing a Master's degree in Computer Science and graduating in December 2024.",
     icon: LuGraduationCap,
-    date: "Sep 2023 - Present",
+    date: "Sep 2023 - Dec 2024",
   },
   {
     title: "BikeHood Research Project",
     location: "University College Dublin",
     description:
-      "We are developing a digital twin of a Dublin neighbourhood, capturing spatial and temporal dynamics of cycling, pedestrian, and transport infrastructure. We will also develop an interactive web application to showcase the digital twin to a variety of stakeholders.",
+      "During my studies, I was one of two students selected to work on the BikeHood project. We developed a platform using React, Golang, and Unity to host an interactive digital twin, which will be rolled out in communities in Dublin to promote sustainable transport decision-making.",
     icon: CgWorkAlt,
-    date: "Aug 2024 - Present",
+    date: "Aug 2024 - Jan 2024",
   },
+  {
+    title: "Data Support Engineer",
+    location: "bsport, Barcelona, Spain",
+    description: 
+      "I work on migrating customer data, building tools to gather data from various sources, and improving scripts to make data processes smoother. I focus on ensuring data accuracy and helping customers transition seamlessly to our platform.",
+    icon: CgWorkAlt,
+    date: "Nov 2024 - Present",
+},
 ] as const;
 
 export const projectsData = [
@@ -118,11 +126,11 @@ export const projectsData = [
     link: "https://onyourbike.info/"
   },
   {
-    title: "Carbon Crunchers",
+    title: "NASA Hackathon Landsat Data Project",
     description:
-      "Developed a 2D game in Java using LibGDX to educate kids on sustainable transport practices and carbon emissions.",
-    tags: ["Java", "LibGDX"],
-    imageUrl: javaGameImg,
+      "Developed a web app to compare ground-based observations with Landsat data, enabling location-based satellite tracking, and notifications.",
+    tags: ["Python", "JavaScript", "nginx"],
+    imageUrl: landsatImg,
     link: "https://github.com/aTomical2/Java"
   },
 ] as const;
@@ -138,9 +146,9 @@ export const skillsData = [
   { name: "Tailwind", iconUrl: "vscode-icons:file-type-tailwind" },
   { name: "GraphQL", iconUrl: "vscode-icons:file-type-graphql" },
   { name: "PostgreSQL", iconUrl: "logos:postgresql" },
-  { name: "Go", iconUrl: "vscode-icons:file-type-go" },
   { name: "Java", iconUrl: "logos:java" },
   { name: "Python", iconUrl: "vscode-icons:file-type-python" },
+  { name: "docker", iconUrl: "vscode-icons:file-type-docker2" },
   { name: "Figma", iconUrl: "logos:figma" },  
   { name: "Framer Motion", iconUrl: "devicon:framermotion" },
 ] as const;
