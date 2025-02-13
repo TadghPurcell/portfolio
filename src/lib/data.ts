@@ -148,7 +148,7 @@ export const skillsData = [
   { name: "PostgreSQL", iconUrl: "logos:postgresql" },
   { name: "Java", iconUrl: "logos:java" },
   { name: "Python", iconUrl: "vscode-icons:file-type-python" },
+  { name: "Go", iconUrl: "vscode-icons:file-type-go" },
   { name: "docker", iconUrl: "vscode-icons:file-type-docker2" },
   { name: "Figma", iconUrl: "logos:figma" },  
-  { name: "Framer Motion", iconUrl: "devicon:framermotion" },
 ] as const;
